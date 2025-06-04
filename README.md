@@ -1,6 +1,8 @@
 # FiveM Lua Completion
 
-**FiveM Lua Completion** is a JetBrains plugin for IntelliJ / Rider that adds autocompletion, documentation, and contextual info for **FiveM Lua natives**.
+<!-- Plugin description -->
+FiveM Lua Completion is a JetBrains plugin that brings autocompletion and documentation for FiveM natives in Lua. It is compatible with Rider, IntelliJ IDEA, and more. Works alongside EmmyLua for a complete experience.
+<!-- Plugin description end -->
 
 > Works alongside [EmmyLua](https://plugins.jetbrains.com/plugin/9768-emmylua) for full Lua syntax support.
 
