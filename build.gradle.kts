@@ -154,6 +154,11 @@ tasks.processResources {
     dependsOn("generateNativeIndex")
 }
 
+tasks.named("verifyPlugin").configure {
+    val isCI = System.getenv().containsKey("CI")
+    enabled = !isCI
+    if (isCI) println("🔧 Skipping verifyPlugin in CI (EmmyLua cannot be resolved by Plugin Verifier).")
+}
 
 intellijPlatformTesting {
     runIde {

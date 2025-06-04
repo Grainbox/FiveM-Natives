@@ -37,6 +37,11 @@ cd FiveM-Lua-Completion
 
 ## 🔨 Building the Plugin
 
+## Dependencies
+
+This plugin requires [EmmyLua](https://plugins.jetbrains.com/plugin/9768-emmylua) to be installed in your IDE.  
+Make sure EmmyLua is installed for proper Lua syntax support and completion.
+
 ### On Linux / macOS:
 
 ```bash
