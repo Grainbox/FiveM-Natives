@@ -1,0 +1,15 @@
+---
+ns: STATS
+aliases: ["0xCE5AA445ABA8DEE0"]
+---
+## _STAT_GET_SAVE_MIGRATION_CONSUME_CONTENT_UNLOCK_STATUS
+
+```c
+// 0xCE5AA445ABA8DEE0
+int _STAT_GET_SAVE_MIGRATION_CONSUME_CONTENT_UNLOCK_STATUS(cs_type(AnyPtr) int* p0);
+```
+
+## Parameters
+* **p0**: 
+
+## Return value

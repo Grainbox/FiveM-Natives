@@ -45,6 +45,8 @@ dependencies {
         plugins(providers.gradleProperty("platformPlugins").map { it.split(',') })
 
         testFramework(TestFrameworkType.Platform)
+
+        plugin("com.tang", "1.4.14-IDEA242")
     }
 }
 
@@ -133,6 +135,25 @@ tasks {
         dependsOn(patchChangelog)
     }
 }
+
+tasks.register("generateNativeIndex") {
+    val nativesDir = file("src/main/resources/natives")
+    val indexFile = file("src/main/resources/natives/index.txt")
+
+    doLast {
+        val lines = nativesDir.walkTopDown()
+            .filter { it.isFile && it.extension == "md" }
+            .map { it.relativeTo(nativesDir).invariantSeparatorsPath }
+            .toList()
+
+        indexFile.writeText(lines.joinToString("\n"))
+    }
+}
+
+tasks.processResources {
+    dependsOn("generateNativeIndex")
+}
+
 
 intellijPlatformTesting {
     runIde {

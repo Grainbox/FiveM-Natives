@@ -1,0 +1,11 @@
+---
+ns: NETWORK
+---
+## NETWORK_LAUNCH_TRANSITION
+
+```c
+// 0x2DCF46CB1A4F0884 0xE3570BA2
+cs_type(Any) BOOL NETWORK_LAUNCH_TRANSITION();
+```
+
+## Return value

@@ -1,15 +1,16 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.grainbox.fivemjetbrains</id>
-    <name>FiveM-Jetbrains</name>
+    <name>FiveM-Natives</name>
     <vendor>grainbox</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <depends>com.tang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.grainbox.fivemjetbrains.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="com.github.grainbox.fivemjetbrains.startup.MyProjectActivity" />
+        <completion.contributor language="Lua"
+                                implementationClass="com.github.grainbox.fivemjetbrains.FiveMCompletionContributor"/>
+        <postStartupActivity implementation="com.github.grainbox.fivemjetbrains.startup.PluginStartupService" />
     </extensions>
 </idea-plugin>
