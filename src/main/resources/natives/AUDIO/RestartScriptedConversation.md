@@ -1,0 +1,11 @@
+---
+ns: AUDIO
+---
+## RESTART_SCRIPTED_CONVERSATION
+
+```c
+// 0x9AEB285D1818C9AC 0x6CB24B56
+void RESTART_SCRIPTED_CONVERSATION();
+```
+
+Restarts a conversation that was previously paused with [PAUSE_SCRIPTED_CONVERSATION](#_0x8530AD776CD72B12)

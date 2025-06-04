@@ -1,0 +1,11 @@
+---
+ns: NETWORK
+---
+## NETWORK_IS_IN_TUTORIAL_SESSION
+
+```c
+// 0xADA24309FE08DACF 0x34DD7B28
+cs_type(Any) BOOL NETWORK_IS_IN_TUTORIAL_SESSION();
+```
+
+## Return value

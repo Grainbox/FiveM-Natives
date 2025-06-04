@@ -1,6 +1,6 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# FiveM-Jetbrains Changelog
+# FiveM-Natives Changelog
 
 ## [Unreleased]
 ### Added

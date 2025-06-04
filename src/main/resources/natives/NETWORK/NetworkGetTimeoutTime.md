@@ -1,0 +1,12 @@
+---
+ns: NETWORK
+aliases: ["0x5ED0356A0CE3A34F"]
+---
+## NETWORK_GET_TIMEOUT_TIME
+
+```c
+// 0x5ED0356A0CE3A34F 0xE1F86C6A
+int NETWORK_GET_TIMEOUT_TIME();
+```
+
+## Return value

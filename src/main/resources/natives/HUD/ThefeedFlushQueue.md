@@ -1,0 +1,11 @@
+---
+ns: HUD
+aliases: ["0xA8FDB297A8D25FBA"]
+---
+## THEFEED_FLUSH_QUEUE
+
+```c
+// 0xA8FDB297A8D25FBA 0x5205C6F5
+void THEFEED_FLUSH_QUEUE();
+```
+

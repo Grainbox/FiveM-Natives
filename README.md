@@ -1,51 +1,91 @@
-# FiveM-Jetbrains
+# FiveM Lua Completion
 
-![Build](https://github.com/Grainbox/FiveM-Jetbrains/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
+**FiveM Lua Completion** is a JetBrains plugin for IntelliJ / Rider that adds autocompletion, documentation, and contextual info for **FiveM Lua natives**.
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [pluginGroup](./gradle.properties) and [pluginName](./gradle.properties), as well as the [id](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the `MARKETPLACE_ID` in the above README badges. You can obtain it once the plugin is published to JetBrains Marketplace.
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
-
-<!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
-
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
-
-To keep everything working, do not remove `<!-- ... -->` sections. 
-<!-- Plugin description end -->
-
-## Installation
-
-- Using the IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "FiveM-Jetbrains"</kbd> >
-  <kbd>Install</kbd>
-  
-- Using JetBrains Marketplace:
-
-  Go to [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID) and install it by clicking the <kbd>Install to ...</kbd> button in case your IDE is running.
-
-  You can also download the [latest release](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID/versions) from JetBrains Marketplace and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
-
-- Manually:
-
-  Download the [latest release](https://github.com/Grainbox/FiveM-Jetbrains/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
-
+> Works alongside [EmmyLua](https://plugins.jetbrains.com/plugin/9768-emmylua) for full Lua syntax support.
 
 ---
-Plugin based on the [IntelliJ Platform Plugin Template][template].
 
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
+## ✨ Features
+
+- ✅ Autocompletion for all **FiveM natives** (e.g. `GetPlayerPed`, `TriggerServerEvent`, etc.)
+- 📄 Inline documentation when available
+- 🔁 Dynamically loaded from the [official FiveM natives documentation](https://github.com/citizenfx/natives)
+- 🚀 Compatible with **Rider**, **IntelliJ IDEA**, **CLion**, etc.
+
+---
+
+## 📦 Manual Local Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Grainbox/FiveM-Lua-Completion.git
+cd FiveM-Lua-Completion
+```
+
+### 2. Requirements
+
+- Java JDK **17** (or 21, if supported by your setup)
+- IntelliJ **Ultimate** or Rider
+- [EmmyLua plugin](https://plugins.jetbrains.com/plugin/9768-emmylua)
+- Gradle (no need to install globally, `./gradlew` is provided)
+
+---
+
+## 🔨 Building the Plugin
+
+### On Linux / macOS:
+
+```bash
+./gradlew buildPlugin
+```
+
+### On Windows (PowerShell):
+
+```powershell
+$env:JAVA_HOME = "C:\Users\yourname\.jdks\openjdk-17"
+$env:PATH = "$env:JAVA_HOME\bin;$env:PATH"
+./gradlew buildPlugin
+```
+
+👉 The plugin `.zip` will be generated at:
+
+```
+build/distributions/FiveM-Natives-*.zip
+```
+
+---
+
+## 📥 Installing in JetBrains IDE
+
+1. Open your JetBrains IDE (Rider, IntelliJ, etc.)
+2. Go to `Settings > Plugins`
+3. Click ⚙️ > `Install Plugin from Disk`
+4. Select the `.zip` file you just built
+5. Restart the IDE
+
+---
+
+## ⚠️ Limitations
+
+- The plugin currently loads raw native definitions (not exact Lua syntax).
+- Not all natives have descriptions or structured parameters yet.
+- Natives are loaded from `*.md` files in resources; JAR-based loading is not implemented yet.
+
+---
+
+## 🔧 Roadmap
+
+- [X] Transform C-style signatures into valid Lua
+- [ ] Show tooltips with native parameters
+- [ ] Add quick links to native documentation
+- [ ] Optional plugin configuration panel
+- [ ] EmmyLua type inference integration
+
+---
+
+## 👨‍💻 Author
+
+Developed by [Grainbox](https://github.com/Grainbox)  
+License: MIT

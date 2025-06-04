@@ -1,0 +1,11 @@
+---
+ns: NETWORK
+---
+## NETWORK_IS_ACTIVITY_SPECTATOR
+
+```c
+// 0x12103B9E0C9F92FB 0xAF329720
+cs_type(Any) BOOL NETWORK_IS_ACTIVITY_SPECTATOR();
+```
+
+## Return value

@@ -1,6 +1,6 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.grainbox.fivemjetbrains</id>
+    <id>com.github.grainbox.fivemnatives</id>
     <name>FiveM-Natives</name>
     <vendor>grainbox</vendor>
 
@@ -10,7 +10,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <completion.contributor language="Lua"
-                                implementationClass="com.github.grainbox.fivemjetbrains.FiveMCompletionContributor"/>
-        <postStartupActivity implementation="com.github.grainbox.fivemjetbrains.startup.PluginStartupService" />
+                                implementationClass="com.github.grainbox.fivemnatives.FiveMCompletionContributor"/>
+        <postStartupActivity implementation="com.github.grainbox.fivemnatives.startup.PluginStartupService" />
     </extensions>
 </idea-plugin>

@@ -1,0 +1,16 @@
+---
+ns: VEHICLE
+aliases: ["0xBFBA3BA79CFF7EBF","_GET_VEHICLE_MODEL_HAND_BRAKE"]
+---
+## GET_VEHICLE_MODEL_MAX_BRAKING_MAX_MODS
+
+```c
+// 0xBFBA3BA79CFF7EBF 0xF3A7293F
+float GET_VEHICLE_MODEL_MAX_BRAKING_MAX_MODS(Hash modelHash);
+```
+
+
+## Parameters
+* **modelHash**: 
+
+## Return value
