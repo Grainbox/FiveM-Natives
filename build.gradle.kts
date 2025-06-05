@@ -137,12 +137,12 @@ tasks {
 }
 
 tasks.register("generateNativeIndex") {
-    val nativesDir = file("src/main/resources/natives")
-    val indexFile = file("src/main/resources/natives/index.txt")
+    val nativesDir = file("src/main/resources/fivem-lls-addon/library")
+    val indexFile = file("src/main/resources/fivem-lls-addon/library/index.txt")
 
     doLast {
         val lines = nativesDir.walkTopDown()
-            .filter { it.isFile && it.extension == "md" }
+            .filter { it.isFile && it.extension == "lua" }
             .map { it.relativeTo(nativesDir).invariantSeparatorsPath }
             .toList()
 

@@ -9,8 +9,8 @@
     <depends>com.tang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="com.github.grainbox.fivemnatives.startup.PluginStartupService" />
         <completion.contributor language="Lua"
                                 implementationClass="com.github.grainbox.fivemnatives.FiveMCompletionContributor"/>
-        <postStartupActivity implementation="com.github.grainbox.fivemnatives.startup.PluginStartupService" />
     </extensions>
 </idea-plugin>

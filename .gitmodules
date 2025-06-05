@@ -1,0 +1,3 @@
+[submodule "src/main/resources/fivem-lls-addon"]
+	path = src/main/resources/fivem-lls-addon
+	url = https://github.com/overextended/fivem-lls-addon.git

@@ -2,8 +2,7 @@ package com.github.grainbox.fivemnatives.services
 
 data class FivemNative(
     val name: String,
-    val signature: String,
-    val description: String,
-    val namespace: String,
-    val docUrl: String
+    val params: List<Pair<String, String>>,
+    val returnType: String?,
+    val doc: String
 )
