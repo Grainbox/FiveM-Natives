@@ -12,7 +12,7 @@ FiveM Lua Completion is a JetBrains plugin that brings autocompletion and docume
 
 - ✅ Autocompletion for all **FiveM natives** (e.g. `GetPlayerPed`, `TriggerServerEvent`, etc.)
 - 📄 Inline documentation when available
-- 🔁 Dynamically loaded from the [official FiveM natives documentation](https://github.com/citizenfx/natives)
+- 🔁 Dynamically loaded from the [unofficial FiveM natives documentation](https://github.com/overextended/fivem-lls-addon)
 - 🚀 Compatible with **Rider**, **IntelliJ IDEA**, **CLion**, etc.
 
 ---
@@ -85,7 +85,7 @@ build/distributions/FiveM-Natives-*.zip
 ## 🔧 Roadmap
 
 - [X] Transform C-style signatures into valid Lua
-- [ ] Show tooltips with native parameters
+- [X] Show tooltips with native parameters
 - [ ] Add quick links to native documentation
 - [ ] Optional plugin configuration panel
 - [ ] EmmyLua type inference integration
